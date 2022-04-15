@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('product_list') }}" class="btn btn-default">Back to Product List</a>
+    <hr/>
+    <h2 class="page-header">{{ products.name }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Price: {{ products.price }}</li>
+        <li class="list-group-item">Quantity: {{ products.quantity }}</li>
+        <li class="list-group-item">Due: <strong>{{ products.date|date('F j,Y, g:i a') }}</strong></li>
+    </ul>
+    <p>{{ products.description }}</p>
+{% endblock %}
